@@ -1,0 +1,116 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+    color:darkblue;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    animation: glow 2s infinite alternate;
+}
+
+.countdown-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-e {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.countdown-e:hover {
+    transform: translateY(-10px) scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.4);
+}
+
+.big-text {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    color: #ffdf00;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    animation: pulse 1.8s infinite ease-in-out;
+}
+
+span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0.85;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1rem;
+    color: black;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .countdown-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .countdown-e {
+        width: 100px;
+    }
+
+    .big-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
